@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import { useScrollAnimation, useParallax } from '../hooks/useScrollAnimations'
+import { useScrollAnimation } from '../hooks/useScrollAnimations'
 
 const Characters = () => {
-  const [ref, inView] = useInView({
+  const [, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
@@ -93,7 +93,7 @@ const Characters = () => {
   const projects = getProjects()
 
   const [currentProject, setCurrentProject] = useState(0)
-  const offset = useParallax()
+  // const offset = useParallax() // Unused
   const [projectRef, projectVisible] = useScrollAnimation({ threshold: 0.2, triggerOnce: true })
 
   return (
@@ -147,7 +147,7 @@ const Characters = () => {
 
           <motion.div
             key={`${language}-${currentProject}`}
-            ref={projectRef}
+            ref={projectRef as any}
             initial={{ opacity: 0, y: 50 }}
             animate={projectVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}

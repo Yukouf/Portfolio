@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer'
 import { useNavigate } from 'react-router-dom'
 import { Code, Database, Palette, Cloud, ArrowRight, Download, Mail } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
-import { useScrollAnimation, useParallax } from '../hooks/useScrollAnimations'
+import { useScrollAnimation } from '../hooks/useScrollAnimations'
 
 const Home = () => {
   const [, inView] = useInView({
@@ -13,10 +13,10 @@ const Home = () => {
 
   const navigate = useNavigate()
   const { t } = useLanguage()
-  const offset = useParallax()
-  const [heroRef, heroVisible] = useScrollAnimation({ threshold: 0.1, triggerOnce: true })
-  const [statsRef, statsVisible] = useScrollAnimation({ threshold: 0.3, triggerOnce: true })
-  const [ctaRef, ctaVisible] = useScrollAnimation({ threshold: 0.2, triggerOnce: true })
+  // const offset = useParallax() // Unused
+  const [heroRef] = useScrollAnimation({ threshold: 0.1, triggerOnce: true })
+  const [statsRef] = useScrollAnimation({ threshold: 0.3, triggerOnce: true })
+  const [ctaRef] = useScrollAnimation({ threshold: 0.2, triggerOnce: true })
 
   const handleViewProjects = () => {
     navigate('/projects')
@@ -54,7 +54,7 @@ const Home = () => {
 
         <div className="max-w-6xl mx-auto">
           <motion.div
-            ref={heroRef}
+            ref={heroRef as any}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -91,7 +91,7 @@ const Home = () => {
       <section className="py-20 px-4 relative">
         <div className="max-w-4xl mx-auto">
           <div 
-            ref={statsRef}
+            ref={statsRef as any}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 depth-container"
           >
             {[
@@ -120,7 +120,7 @@ const Home = () => {
       <section className="py-20 px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            ref={ctaRef}
+            ref={ctaRef as any}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1 }}

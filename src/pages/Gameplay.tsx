@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Shield, Zap, Cloud, Server, Network, Monitor, Globe, Users, BookOpen, MapPin, Mail, Phone, Github, Linkedin } from 'lucide-react'
+import { Shield, Zap, Cloud, Server, Network, Monitor, Globe, Users, BookOpen, MapPin, Github, Linkedin } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
 import CopyButton from '../components/CopyEmailButton'
 
