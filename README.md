@@ -1,6 +1,4 @@
-# 🛡️ Watchdogs - Site Web Officiel
-
-Un site web moderne et immersif pour la franchise Watchdogs, créé avec les technologies les plus avancées.
+# 🛡️ Porfolio
 
 ## 🚀 Technologies Utilisées
 
@@ -15,7 +13,7 @@ Un site web moderne et immersif pour la franchise Watchdogs, créé avec les tec
 
 ## 🎨 Design & Style
 
-Le site adopte l'esthétique cyberpunk de Watchdogs avec :
+Le site adopte l'esthétique cyberpunk avec :
 - Palette de couleurs sombre avec des accents bleus et verts
 - Effets de lueur (glow) et animations fluides
 - Typographie moderne et lisible
@@ -40,29 +38,6 @@ src/
 └── index.css          # Styles globaux
 ```
 
-## 🛠️ Installation
-
-1. **Cloner le projet**
-   ```bash
-   git clone [url-du-repo]
-   cd watchdogs-website
-   ```
-
-2. **Installer les dépendances**
-   ```bash
-   npm install
-   ```
-
-3. **Lancer le serveur de développement**
-   ```bash
-   npm run dev
-   ```
-
-4. **Ouvrir dans le navigateur**
-   ```
-   http://localhost:3000
-   ```
-
 ## 📦 Scripts Disponibles
 
 - `npm run dev` - Lance le serveur de développement
@@ -77,25 +52,9 @@ src/
 - Présentation des fonctionnalités principales
 - Call-to-action pour commencer l'aventure
 
-### 📖 À Propos
-- Histoire de la franchise Watchdogs
-- Timeline interactive de l'évolution
-- Statistiques et chiffres clés
-
-### 👥 Personnages
-- Présentation des héros de la série
-- Statistiques détaillées de chaque personnage
-- Compétences et spécialités
-
-### 🎮 Gameplay
-- Mécaniques de jeu révolutionnaires
-- Outils de hacking disponibles
-- Modes de jeu (Infiltration/Action)
-
 ### 📞 Contact
 - Formulaire de contact interactif
 - Informations de contact
-- FAQ intégrée
 
 ## 🎨 Personnalisation
 
@@ -187,10 +146,6 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## 🙏 Remerciements
 
-- Ubisoft pour la franchise Watchdogs
 - La communauté React pour les outils incroyables
-- Tous les contributeurs open source
 
 ---
-
-**Hack the World** 🛡️⚡ 
